@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Monomakh&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #731399, #07000a);
+  color: #ffffff;
+  font-family: "Monomakh", serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-container {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.main-title {
+  font-size: 120px;
+  color: white;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: white;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+.subtitle a {
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.subtitle a:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f5e6ff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+h5 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+h6 {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+/* 🎯 Board with gradient only behind squares */
+.board-grid {
+  background: linear-gradient(135deg, #4a0e5b, #a64aff);
+  border-radius: 15px;
+  padding: 0px;
+  padding-top: 5px;
+  padding-right: 5px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.square {
+  /* Inherit cohesive gradient from .board-grid */
+  background: inherit;
+  border: 5px solid #2f0b3c;
+  float: left;
+  height: 100px;
+  margin-right: -5px;
+  margin-top: -5px;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+  width: 100px;
+
+  /* Square Text */
+  color: white;
+  font-family: "Monomakh", serif;
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 100px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  background-clip: padding-box;
+}
+
+/* Glowing animation for winning squares */
+.square.highlight {
+  animation: glow 1s infinite alternate;
+  position: relative;
+  z-index: 10;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+  }
+  to {
+    box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+  }
+}
+
+/* Rounded corners for only the corner squares */
+.square.top-left {
+  border-top-left-radius: 12px;
+}
+
+.square.top-right {
+  border-top-right-radius: 12px;
+}
+
+.square.bottom-left {
+  border-bottom-left-radius: 12px;
+}
+
+.square.bottom-right {
+  border-bottom-right-radius: 12px;
+}
+
+.square:hover {
+  transform: scale(1.05);
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/* 🎯 Status Message (outside gradient) */
+.status {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f5e6ff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* 🛠️ Game Layout */
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 📜 Move Log */
+.game-info {
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-info ol {
+  padding: 0;
+  list-style: none;
+}
+
+.game-info li {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.game-info button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  border: 1px solid #2f0b3c;
+  background: linear-gradient(135deg, #4a0e5b, #a64aff);
+  color: #ffffff;
+  font-family: "Monomakh", serif;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.6);
+}
+
+.game-info button:hover {
+  transform: scale(1.05);
+}
+
+/* 🖥️ Center the game in the viewport */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
