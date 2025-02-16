@@ -1,6 +1,6 @@
 # TicTacToe
 
-This project is a customized version of the classic **Tic-Tac-Toe** game, built using **React.js** as part of a learning tutorial. I’ve added my own **personal touch** by enhancing the design, structure, and functionality of the original project. 🛠️✨
+This project is a customized version of the classic **Tic-Tac-Toe** game, built using **React.js** as part of a learning tutorial. I’ve added my own **personal touch** by enhancing the design, structure, and functionality of the original project.
 
 ---
 
@@ -92,24 +92,18 @@ The goal of this project was to practice and solidify core **React.js** concepts
     npm start
     ```
 
-4. Open `http://localhost:3000` in your browser to play the game. 🎮  
+4. Open `http://localhost:3000` in your browser to play the game.  
 
 ---
 
 ## 🎮 Gameplay Instructions
 
-1. **Player 1:** "X" 🧑‍💻  
-2. **Player 2:** "O" 🎯  
+1. **Player 1:** "X"
+2. **Player 2:** "O"  
 
 - Players take turns clicking on empty squares.  
 - The game announces the **winner** or **draw** when applicable.  
 - **Game history** is tracked on the right side for navigating between moves.  
-
----
-
-## 📸 Preview
-
-![TicTacToe Preview](https://via.placeholder.com/800x400?text=TicTacToe+Game+Preview) *(Replace with actual screenshot)*  
 
 ---
 
